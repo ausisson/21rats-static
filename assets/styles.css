@@ -1,0 +1,169 @@
+
+@font-face {
+  font-family: 'Handwriting';
+  src: url(./Handwriting-Regular.ttf) format("truetype");
+}
+
+.home__loader {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 15px;
+    aspect-ratio: 5;
+    --_g:no-repeat radial-gradient(farthest-side,#000 94%,#0000);
+    background: var(--_g),var(--_g),var(--_g),var(--_g);
+    background-size: 20% 100%;
+    animation:
+        d10-1 .75s infinite alternate,
+        d10-2 1.5s infinite alternate; 
+}
+
+.h-full {
+  height: 100vh;
+}
+
+@keyframes d10-1 {
+  0%,
+  10% {background-position: 0 0,0 0,0 0,0 0}
+  33% {background-position: 0 0,calc(100%/3) 0,calc(100%/3) 0,calc(100%/3) 0}
+  66% {background-position: 0 0,calc(100%/3) 0,calc(2*100%/3) 0,calc(2*100%/3) 0}
+  90%,
+  100% {background-position: 0 0,calc(100%/3) 0,calc(2*100%/3) 0,100% 0}
+}
+
+@keyframes d10-2 {
+  0%,49.99% {transform: scale( 1)}
+  50%,100%  {transform: scale(-1)}
+}
+
+h1 {
+  display:flex;
+  margin-top: 0;
+  margin-bottom: 5px;
+  align-content: firstbaseline;
+  padding-top: 0px;
+  font-size:7em;
+  text-shadow: 0px 0px 3px white;
+}
+
+h2.inline {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 12px;
+  text-shadow: 0px 0px 3px white;
+}
+
+.homepage {
+  font-family: 'Handwriting';
+  color:#0a0a0a;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.landing {
+  display: flex;
+  flex-direction: row;
+}
+
+img.ratsitting {
+  object-position: 40% 50%;
+  float: left;
+  width: 500px;
+  height: 637.5px;
+  object-fit:none;
+
+}
+
+.links {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.spacer {
+  display: flex;
+  height: 20px;
+}
+
+a {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  font-size: 5em;
+  font-weight: 50;
+  color: #0a0a0a;
+  text-decoration: none;
+  text-shadow: 0px 0px 3px white;
+}
+
+.wavy {
+  animation-name: wavy;
+  animation-duration: .75s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: relative;
+  --padding: 10px;
+  padding-right: var(--padding);
+  --xC: 0px;
+  --yC: 0px;
+  --xA: 2px;
+  --xB: 0px;
+  --yA: 2px;
+  --yB: 0px;
+  --currentX: 0px;
+  --currentY: 0px;
+}
+
+@keyframes wavy {
+  0% {
+    top: var(--xC);
+    left: var(--yC);
+  }
+  50%{
+    top: var(--xA);
+    left:var(--yA);
+  }
+  100% {
+    top: var(--xB);
+    left:var(--yB);
+  }
+}
+
+@keyframes reset {
+  0% {
+    top: var(--currentX);
+    left: var(--currentY);
+    padding-right: var(--padding);
+  }
+  100%{
+    top: 0px;
+    left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@keyframes reset-reverse {
+  0% {
+    top: 0px;
+    left: 0px;
+    padding-right: 0px;
+  }
+  100% {
+    top: var(--currentX);
+    left: var(--currentY);
+    padding-right: var(--padding);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #first-landing {z-index: 9;}
+  #second-landing .links {z-index: 3; margin-top: 5rem;}
+  #second-landing .ratsitting {z-index: 1; position: absolute; top: 50%; margin-top: -319px;}
+}
