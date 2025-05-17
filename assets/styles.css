@@ -68,6 +68,11 @@ h2.inline {
   flex-direction: row;
 }
 
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
 img.ratsitting {
   object-position: 40% 50%;
   float: left;
