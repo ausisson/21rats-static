@@ -81,6 +81,7 @@ h2.inline {
 .lineseparate {
   position: relative;
   top: -100px;
+  height:1px;
   font-size: 6em;
   padding-bottom: 0px;
   margin-bottom: 0px;
