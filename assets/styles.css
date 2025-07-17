@@ -131,8 +131,24 @@ img.ratsitting {
 
 .spacer {
   display: flex;
-  height: 20px;
+  height: 2em;
 }
+
+.spacer-wide {
+  width: 35em;
+}
+
+.left-align {
+  justify-content: left-align;
+  align-content: left-align;
+  justify-items: left-align;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 
 a {
   display: block;
