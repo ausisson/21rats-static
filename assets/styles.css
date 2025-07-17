@@ -46,6 +46,15 @@ h1 {
   text-shadow: 0px 0px 3px white;
 }
 
+.smaller {
+  position: relative;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  align-content: center;
+  align-self: center;
+  font-size:4em;
+}
+
 
 h2.inline {
   display: flex;
@@ -71,17 +80,24 @@ h2.inline {
 
 .lineseparate {
   position: relative;
-  top: -120px;
+  top: -100px;
+  font-size: 6em;
   padding-bottom: 0px;
   margin-bottom: 0px;
   align-content: center;
   align-self: center;
 }
 
+.bigger {
+  font-size: 7em;
+}
+
 .myname {
   display: flex;
+  overflow: ;
   flex-direction: column;
   margin-bottom: 0px;
+  padding-bottom:0px;
 }
 
 .portfolio {

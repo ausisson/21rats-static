@@ -22,10 +22,10 @@ function updateText(text,h1) {
 		span.classList.add(letterClass);
 		let animatedClass = coinFlip() ? "wavy" : "wavy"
 		span.classList.add(animatedClass);
-		span.style.setProperty("--xA",getRandomNumber(-4,4) + "px");
-		span.style.setProperty("--yA",getRandomNumber(-4,4) + "px");
-		span.style.setProperty("--xB",getRandomNumber(-4,4) + "px");
-		span.style.setProperty("--yB",getRandomNumber(-4,4) + "px");
+		span.style.setProperty("--xA",getRandomNumber(-8,8) + "px");
+		span.style.setProperty("--yA",getRandomNumber(-8,8) + "px");
+		span.style.setProperty("--xB",getRandomNumber(-8,8) + "px");
+		span.style.setProperty("--yB",getRandomNumber(-8,8) + "px");
 		setTimeout(()=>{ changeLocation(span) },.5);
 	});
 
@@ -46,8 +46,8 @@ function changeLocation (event) {
 	const span = event.target ? event.target : event;
 	//const xC = span.style.getPropertyValue("--xB");
 	//const yC = span.style.getPropertyValue("--yB");
-	const xC = getRandomNumber(-4,4) + "px";
-	const yC = getRandomNumber(-4,4) + "px";
+	const xC = getRandomNumber(-8,8) + "px";
+	const yC = getRandomNumber(-8,8) + "px";
 	span.style.setProperty("--xC",yC);
 	span.style.setProperty("--yC",yC);	
 	return span;
