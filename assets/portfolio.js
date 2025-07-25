@@ -21,7 +21,7 @@ var hoverEvent = (event) => {
 	animate(`.${id}`, {
 		scale:1.5,
 
-	}, {type:"spring",stiffness:500,delay:stagger(.01)})
+	}, {type:"spring",stiffness:300})
 };
 
 
