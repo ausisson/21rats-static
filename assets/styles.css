@@ -73,6 +73,23 @@ h2.inline {
   align-items: center;
 }
 
+.portfolio-link{
+  z-index: 10;
+}
+
+.word {
+  z-index:10;
+}
+.comic{
+  z-index:10;
+}
+.contact{
+  z-index:10;
+}
+.video{
+  z-index:10;
+}
+
 .landing {
   display: flex;
   flex-direction: row;
@@ -109,6 +126,7 @@ h2.inline {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  position: relative;
 }
 
 img.ratsitting {
@@ -118,6 +136,17 @@ img.ratsitting {
   height: 637.5px;
   object-fit:none;
 
+}
+
+img.arm{
+  z-index: 4;
+  background: transparent;
+  position: absolute;
+}
+
+img.guy {
+  z-index: 1;
+  position: relative;
 }
 
 .links {
@@ -135,18 +164,18 @@ img.ratsitting {
 }
 
 .spacer-wide {
-  width: 10em;
+  width: 226px;
 }
 
 .left-align {
-  justify-content: left-align;
-  align-content: left-align;
-  justify-items: left-align;
+  position: relative;
+  width: 230px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 
