@@ -8,23 +8,15 @@ const MAXROTATE = 50;
 const MINROTATE = -50;
 
 
-const handleClick = (event) =>{
-	//console.log(event.clientX)
-}
-
 const handleMouse = (event) => {
 
 	const mouseCoords = getMouseCoords(event);
-	const armCoords = getArmCoords();
-	
 	const angle = getAngle(mouseCoords);
-	console.log(angle)
 
 	animate(".arm",{
 		rotate:angle
 	})
-	//console.log("arm coords {x: " + armCoords.x + ", y: "+ armCoords.y + " }");
-	//console.log("click coords {x: " + mouseCoords.x + ", y: " + mouseCoords.y + " }");
+	
 }
 
 const getMouseCoords = (event) =>{
@@ -39,8 +31,6 @@ const getArmCoords = () => {
 const getAngle = (coords) => {
 	const opp = coords.y - YVAL;
 	const adj = (coords.x - XVAL) < 0 ? coords.x-XVAL : -1;
-	console.log("opp" + opp)
-	console.log("adj" + adj)
 	let angle = (Math.atan2(opp,adj)*180/Math.PI) + 180;
 	if (angle > 90) {
 		angle = angle - 360;
@@ -51,9 +41,7 @@ const getAngle = (coords) => {
 
 }
 
-const inital = getArmCoords();
 document.addEventListener("mousemove", handleMouse);
-document.addEventListener("mousedown",handleClick);
 
 
 
