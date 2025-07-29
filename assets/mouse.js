@@ -2,17 +2,17 @@
 
 
 const ROTATEVAL = -27;
-const YVAL = 490;
-const XVAL = 545;
+const YVAL = 480;
+const XVAL = 725;
 const MAXROTATE = 50;
 const MINROTATE = -50;
 
 
-const handleMouse = (event) =>{
+const handleClick = (event) =>{
 	//console.log(event.clientX)
 }
 
-const handleClick = (event) => {
+const handleMouse = (event) => {
 
 	const mouseCoords = getMouseCoords(event);
 	const armCoords = getArmCoords();
