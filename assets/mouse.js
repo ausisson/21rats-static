@@ -13,6 +13,7 @@ const handleMouse = (event) => {
 	const mouseCoords = getMouseCoords(event);
 	const angle = getAngle(mouseCoords);
 
+	//if(angle == MINROTATE || angle == MAXROTATE){return;}
 	animate(".arm",{
 		rotate:angle
 	})

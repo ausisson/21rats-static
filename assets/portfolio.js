@@ -61,11 +61,25 @@ var clickEvent = (event) => {
 
 		},750,el)
 		setTimeout((el)=>{
+			const cleanSlate = document.querySelector(".cleanslate");
+			cleanSlate.width = window.innerWidth;
+			cleanSlate.height = window.innerHeight;
+			//console.log(cleanSlate);
+			cleanSlate.src = "./assets/cleanslate.gif";
+		},1000,el)
+		setTimeout((el)=>{
 			animate(el,{
 				scale:0,
-			}).then(()=>{location.href=`./${parent.id}.html`
-			console.log(parent.id)})
-		},1500,el)
+			})
+			cleanSlate.width = 0;
+			cleanSlate.height = 0;
+			cleanSlate.src = "";
+			
+		},2450,el)
+		setTimeout((el)=>{
+			location.href=`./${parent.id}.html`
+			//console.log(parent.id)
+		},3000,el)
 	});
 	
 	//animation.then(()=> {})

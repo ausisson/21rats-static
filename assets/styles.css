@@ -149,6 +149,12 @@ img.guy {
   position: relative;
 }
 
+img.cleanslate {
+  top: -10px;
+  z-index: 100;
+  position: absolute;
+}
+
 .links {
   width: 400px;
   display: flex;
